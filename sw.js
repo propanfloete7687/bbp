@@ -1,10 +1,10 @@
-const CACHE = 'bbp-trainer-v1';
+const CACHE = 'bbp-v1';
 const FILES = [
-  '/bbp-trainer/',
-  '/bbp-trainer/index.html',
-  '/bbp-trainer/manifest.json',
-  '/bbp-trainer/icon-192.png',
-  '/bbp-trainer/icon-512.png'
+  '/bbp/',
+  '/bbp/index.html',
+  '/bbp/manifest.json',
+  '/bbp/icon-192.png',
+  '/bbp/icon-512.png'
 ];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
