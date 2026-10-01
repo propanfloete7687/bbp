@@ -1,7 +1,7 @@
 {
   "name": "BBP Trainer",
   "short_name": "BBP Trainer",
-  "description": "BBP Trainer – Bauch, Beine, Po Training mit Timer und Übungsbibliothek",
+  "description": "BBP Trainer – Bauch Beine Po Training mit Timer und Uebungsbibliothek",
   "start_url": "/bbp/",
   "scope": "/bbp/",
   "display": "standalone",
