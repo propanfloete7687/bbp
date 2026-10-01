@@ -127,6 +127,12 @@ jobs:
           </resources>
           EOF
 
+          cat > twa/gradle.properties << 'EOF'
+          android.useAndroidX=true
+          android.enableJetifier=true
+          org.gradle.jvmargs=-Xmx2048m
+          EOF
+
       - name: Download icons
         run: |
           curl -sL "https://propanfloete7687.github.io/bbp/icon-192.png" \
