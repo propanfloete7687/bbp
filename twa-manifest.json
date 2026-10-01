@@ -1,0 +1,43 @@
+{
+  "packageId": "io.github.propanfloete7687.bbp",
+  "host": "propanfloete7687.github.io",
+  "name": "BBP Trainer",
+  "launcherName": "BBP Trainer",
+  "display": "standalone",
+  "themeColor": "#E91E8C",
+  "navigationColor": "#E91E8C",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#E91E8C",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#0A0A1A",
+  "enableNotifications": false,
+  "startUrl": "/bbp/",
+  "iconUrl": "https://propanfloete7687.github.io/bbp/icon-512.png",
+  "maskableIconUrl": "https://propanfloete7687.github.io/bbp/icon-512.png",
+  "monochromeIconUrl": "https://propanfloete7687.github.io/bbp/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "unsigned",
+    "alias": "bbp-trainer"
+  },
+  "appVersion": "1",
+  "appVersionName": "1.0.0",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://propanfloete7687.github.io/bbp/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "playBilling": {
+      "enabled": true
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "default",
+  "fingerprints": []
+}
