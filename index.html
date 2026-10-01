@@ -70,11 +70,11 @@ tbody td{padding:8px 10px;font-size:.82rem;vertical-align:middle}
 tbody td:first-child{border-radius:8px 0 0 8px}
 tbody td:last-child{border-radius:0 8px 8px 0;text-align:right}
 .cat-badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;padding:2px 6px;border-radius:4px;margin-right:5px}
-.cat-warmup{background:rgba(255,64,129,.18);color:#FF80AB)}
-.cat-bauch{background:rgba(255,214,0,.15);color:#FFD600)}
-.cat-beine{background:rgba(0,229,255,.15);color:#00E5FF)}
-.cat-po{background:rgba(255,109,0,.18);color:#FF9D45)}
-.cat-cooldown{background:rgba(0,230,118,.15);color:#69F0AE)}
+.cat-warmup{background:rgba(255,64,129,.18);color:#FF80AB}
+.cat-bauch{background:rgba(255,214,0,.15);color:#FFD600}
+.cat-beine{background:rgba(0,229,255,.15);color:#00E5FF}
+.cat-po{background:rgba(255,109,0,.18);color:#FF9D45}
+.cat-cooldown{background:rgba(0,230,118,.15);color:#69F0AE}
 
 .diff-badge{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.58rem;text-transform:uppercase;padding:1px 5px;border-radius:3px}
 .diff-1{background:rgba(0,230,118,.15);color:#00E676}
@@ -677,7 +677,7 @@ function loadTemplate(i){
 }
 function renderWeek(){
   const today=new Date().getDay(),todayIdx=(today+6)%7;const days=t('days');
-  document.getElementById('weekGrid').innerHTML=days.map((d,i)=>{const a=weekPlan[i],isToday=i===todayIdx;return`<div class="day-cell ${a?'has-training':''} ${isToday?'today':''}" onclick="assignDay(${i}))"><div class="day-name">${d}</div>${a?`<div class="day-training">${a}</div><button class="day-remove" onclick="event.stopPropagation();removeDay(${i})">✕</button>`:''}</div>`}).join('');
+  document.getElementById('weekGrid').innerHTML=days.map((d,i)=>{const a=weekPlan[i],isToday=i===todayIdx;return`<div class="day-cell ${a?'has-training':''} ${isToday?'today':''}" onclick="assignDay(${i})"><div class="day-name">${d}</div>${a?`<div class="day-training">${a}</div><button class="day-remove" onclick="event.stopPropagation();removeDay(${i})">✕</button>`:''}</div>`}).join('');
   const ta=weekPlan[todayIdx],al=document.getElementById('weekAlert');
   if(ta){al.style.display='flex';document.getElementById('weekAlertText').textContent=`${t('today')}: ${ta}`}else al.style.display='none';
 }
