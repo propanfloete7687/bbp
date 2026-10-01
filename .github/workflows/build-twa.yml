@@ -22,6 +22,11 @@ jobs:
           printf '24333f8a63b6825ea9c5514f83c2829b004d1fee\n84831b9409646a918e30573bab4c9c91346d8abd\n' \
             > "$ANDROID_HOME/licenses/android-sdk-license"
 
+      - name: Install Android SDK 36
+        run: |
+          echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-36" "build-tools;36.0.0"
+
       - name: Generate upload keystore
         run: |
           keytool -genkeypair \
@@ -145,7 +150,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.4'
+          gradle-version: '8.7'
 
       - name: Build AAB
         run: gradle --project-dir twa bundleRelease --no-daemon
